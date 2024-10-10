@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Flexbox Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Flexbox layout */
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            background-color: #555;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+        }
+
+        article {
+            flex: 3;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-right: 20px;
+        }
+
+        aside {
+            flex: 1;
+            padding: 20px;
+            background-color: #e2e2e2;
+        }
+
+        footer {
+            background-color: #333;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        @media (max-width:600px) {
+            main{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Section -->
+    <header>
+        <h1>Website Header</h1>
+        <p>Welcome to our website!</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="#" style="color:white;">Home</a> | 
+        <a href="#" style="color:white;">About</a> | 
+        <a href="#" style="color:white;">Services</a> | 
+        <a href="#" style="color:white;">Contact</a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Article Section -->
+        <article>
+            <h2>Main Article</h2>
+            <p>This is the main content area of the website. It contains the most important information related to the topic of the site.</p>
+        </article>
+
+        <!-- Aside Section -->
+        <aside>
+            <h3>Related Links</h3>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>Contact Information</h4>
+                <p>123 Street, City</p>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <p>Social Links</p>
+            </div>
+            <div>
+                <h4>Copyright</h4>
+                <p>&copy; 2022 Website</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
